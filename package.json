@@ -1,0 +1,43 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint:fix": "eslint --fix ./src/**/*.{js,jsx,ts,tsx,json}"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.8.2",
+    "sass": "^1.59.2",
+    "tailwindcss": "^3.2.7",
+    "usehooks-ts": "^2.9.1",
+    "vite": "^4.1.4",
+    "vite-tsconfig-paths": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.3"
+  }
+}

@@ -1,0 +1,103 @@
+.button-border-hover {
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px;
+  background: transparent;
+  a{
+    display: block;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+  }
+
+  &:hover::after,
+  &:hover::before {
+    width: 100%;
+    transition-delay: 0.2s;
+  }
+
+  a::before,
+  a::after,
+  span::before,
+  span::after {
+    content: "";
+    width: 2px;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+    transition-delay: 0s;
+  }
+  &:hover{
+    background: rgba(0, 0, 0, 0.09);
+    a::after, a::before, span::after, span::before{
+      height: 100%;
+      transition-delay: 0s;
+    }
+  }
+  &::before{
+    right: 0;
+    top: 0;
+  }
+  &::after{
+    left: 0;
+    bottom: 0;
+  }
+  a::before, span::before{
+    left: 0;
+    top: 0;
+  }
+  a::after, span::after{
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.border-avatar {
+  /*background-image:
+    linear-gradient(white, white),
+    linear-gradient(180deg, cornflowerblue, purple);*/
+
+  background-image:
+    linear-gradient(white, white),
+    linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);
+
+  background-repeat: no-repeat;
+  background-origin: padding-box, border-box;
+  text-align: center;
+  &.animated {
+    background-image:
+      linear-gradient(white, white),
+      linear-gradient(180deg, cornflowerblue, purple 50%, cornflowerblue);
+  
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 100% 200%;
+    background-position: 0 0, 0 100%;
+    background-origin: padding-box, border-box;
+    animation: highlight 1s infinite alternate;
+  }
+}
+
+
+
+@keyframes highlight {
+  100% {
+    background-position: 0 0, 0 0;
+  }
+}
+
+.skew-parallelogram{
+  transform: skew(-12deg);
+}
